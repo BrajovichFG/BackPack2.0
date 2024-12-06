@@ -34,13 +34,19 @@ class PostLogin : AppCompatActivity() {
         // Inicializar firebase
         auth = Firebase.auth
 
-        // PRogramar el boton de logout
+        // Mostrar el correo del usuario
+        val user = auth.currentUser
+        user?.let {
+            binding.tvUserEmail.text = it.email
+        }
+
+        // Programar el botón de logout
         binding.btnLogout.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Cerrar sesión")
                 .setMessage("¿Estás seguro de que deseas cerrar sesión?")
                 .setNeutralButton("Cancelar") { dialog, which ->
-                    // Respond to neutral button press
+                    // Responder a la acción del botón neutro
                 }
                 .setPositiveButton("Aceptar") { dialog, which ->
                     signOut()
