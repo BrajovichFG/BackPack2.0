@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "341083194660",
+    "project_id": "backpackgpsdb",
+    "storage_bucket": "backpackgpsdb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341083194660:android:1074e7a91caf709d47dfb1",
+        "android_client_info": {
+          "package_name": "com.example.backpack20"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjC5abrUNxpgzmBAVjsrVVukjawZ5baYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
