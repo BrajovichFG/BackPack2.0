@@ -14,9 +14,9 @@ import com.google.firebase.auth.auth
 
 class RegistrarActivity : AppCompatActivity() {
 
-    // binding
+    //configuracion viewbinding
     private lateinit var binding: ActivityRegistrarBinding;
-    //firebase
+    //configuracion firebase
     private lateinit var auth: FirebaseAuth;
 
 
@@ -24,6 +24,7 @@ class RegistrarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        //inicializacion Binding
         binding = ActivityRegistrarBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -32,6 +33,7 @@ class RegistrarActivity : AppCompatActivity() {
             insets
         }
 
+        //inicializacion Firebase
         auth = Firebase.auth
 
         binding.btnRegistrar.setOnClickListener{
@@ -40,6 +42,7 @@ class RegistrarActivity : AppCompatActivity() {
             val pass1 = binding.etPassword.text.toString()
             val pass2 = binding.etPassword2.text.toString()
 
+            //condiciones para campos vacios
             if (email.isEmpty()){
                 binding.etEmail.error = "Porfavor ingrese un correo"
                 return@setOnClickListener
@@ -61,6 +64,7 @@ class RegistrarActivity : AppCompatActivity() {
         }
     }
 
+    //funcion para registrar
     private fun singUp(email: String, pass1: String) {
         auth.createUserWithEmailAndPassword(email,pass1)
             .addOnCompleteListener{

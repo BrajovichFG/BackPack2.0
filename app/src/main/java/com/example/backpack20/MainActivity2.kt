@@ -44,6 +44,8 @@ class MainActivity2 : AppCompatActivity() {
             //generar el id random
             val id = database.child("Productos").push().key
 
+            //condicionales para no tener campos vacios
+
             if (nombre.isEmpty()){
                 binding.etNombreProducto.error = "Porfavor ingresar nombre"
                 return@setOnClickListener
@@ -52,10 +54,13 @@ class MainActivity2 : AppCompatActivity() {
                 binding.etDescripcionProducto.error = "Porfavor ingrese algo"
             }
 
+            //definimos constructor
             val producto = Producto(id,nombre,descripcion)
 
+            //funcion para la insercion,
             database.child(id!!).setValue(producto)
                 .addOnCompleteListener{
+                    //reinicia el los campos para seguir ingresando
                     binding.etNombreProducto.setText("")
                     binding.etDescripcionProducto.setText("")
                     Snackbar.make(binding.root,"Producto Agregado",Snackbar.LENGTH_SHORT).show()

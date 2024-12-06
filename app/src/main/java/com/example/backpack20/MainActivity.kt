@@ -15,16 +15,17 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 
 class MainActivity : AppCompatActivity() {
-    //vinding
+
+    //Se configura ViewBinding
     private lateinit var binding: ActivityMainBinding;
-    //firebase
+    //Se configura FireBase
     private lateinit var auth: FirebaseAuth;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        //vinding
+        //se inicializa Binding
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -34,11 +35,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-       //cargar fragmento
+       //cargar fragmementos (arreglar menu)
 
 
         auth = Firebase.auth
-        //boton login
+
+        //configuracion para boton login
         binding.btnLogin.setOnClickListener{
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity() {
             //iniciar sesion
             singUp(email, password)
         }
+
         //enlace para registro
         binding.tvRegistrar.setOnClickListener {
             try {
