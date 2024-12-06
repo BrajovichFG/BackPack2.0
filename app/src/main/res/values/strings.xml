@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">BackPack2.0</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="no_estas_registrado_reg_strate">¿No estas registrado? Regístrate</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="correo_electr_nico">Correo Electrónico</string>
+    <string name="login">Login</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="correo_del_usuario">Correo del usuario</string>
+    <string name="cerrar_sesi_n">Cerrar Sesión</string>
 </resources>

@@ -37,7 +37,7 @@ class PostLogin : AppCompatActivity() {
         // Mostrar el correo del usuario
         val user = auth.currentUser
         user?.let {
-            binding.tvUserEmail.text = it.email
+            binding.tvUserEmail.text = "Ingresaste como ${it.email}"
         }
 
         // Programar el botón de logout
@@ -46,7 +46,7 @@ class PostLogin : AppCompatActivity() {
                 .setTitle("Cerrar sesión")
                 .setMessage("¿Estás seguro de que deseas cerrar sesión?")
                 .setNeutralButton("Cancelar") { dialog, which ->
-                    // Responder a la acción del botón neutro
+
                 }
                 .setPositiveButton("Aceptar") { dialog, which ->
                     signOut()
