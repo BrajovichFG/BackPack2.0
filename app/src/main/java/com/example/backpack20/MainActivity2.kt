@@ -1,5 +1,6 @@
 package com.example.backpack20
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -15,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 class MainActivity2 : AppCompatActivity() {
 
     //Activacion de viewBinding
-    private lateinit var binding: ActivityMain2Binding
+    private lateinit var binding: ActivityMain2Binding;
     //firebase RealTime
     private lateinit var database: DatabaseReference
 
@@ -28,7 +29,7 @@ class MainActivity2 : AppCompatActivity() {
         //para obtener todas las id de manera automatica
         setContentView(binding.root)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main2)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
@@ -65,6 +66,10 @@ class MainActivity2 : AppCompatActivity() {
                     binding.etDescripcionProducto.setText("")
                     Snackbar.make(binding.root,"Producto Agregado",Snackbar.LENGTH_SHORT).show()
                 }
+        }
+        binding.btnVer.setOnClickListener{
+            val intent = Intent(this,VerProductosActivity::class.java)
+            startActivity(intent)
         }
     }
 }
