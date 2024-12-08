@@ -65,7 +65,43 @@ class PostLogin : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Configuración de navegación con el BottomNavigationView
+        binding.bootomNavigation.setOnItemSelectedListener {
+            when (it.itemId){
+                R.id.item_1 -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, PerfilFragment()).commit()
+                    true
+                }
+                R.id.item_2 -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, SalirFragment()).commit()
+                    true
+                }
+                R.id.item_3 -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, AvanzadoFragment()).commit()
+                    true
+                }
+                else -> false
+            }
+        }
+
+        // Evitar recargar los fragmentos cuando se re-selecciona un ítem
+        binding.bootomNavigation.setOnItemReselectedListener {
+            when (it.itemId){
+                R.id.item_1 -> {
+                    true
+                }
+                R.id.item_2 -> {
+                    true
+                }
+                R.id.item_3 -> {
+                    true
+                }
+                else -> false
+            }
+        }
     }
+
+
 
 
     private fun signOut() {

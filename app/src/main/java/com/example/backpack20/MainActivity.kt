@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
        //cargar fragmementos (arreglar menu)
 
 
+
         auth = Firebase.auth
 
         //configuracion para boton login

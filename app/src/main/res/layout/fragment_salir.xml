@@ -14,11 +14,12 @@
         android:textSize="70sp"/>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogout"
+        android:id="@+id/btnVolverMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="70dp"
-        android:text="@string/cerrar_sesi_n" />
+
+        android:layout_marginTop="100dp"
+        android:text="Volver al menu Principal" />
 
 
 </FrameLayout>
