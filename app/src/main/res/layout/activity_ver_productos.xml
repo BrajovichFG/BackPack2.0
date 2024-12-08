@@ -13,7 +13,7 @@
         android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Listado de productos"
+        android:text="@string/listado_de_dispositivos"
         android:textColor="@color/black"
         android:layout_gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"/>

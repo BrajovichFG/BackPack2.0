@@ -18,7 +18,20 @@
         android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/imggps"
+        android:src="@drawable/gps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilEmail"
@@ -28,8 +41,8 @@
         app:startIconTint="@color/black"
         android:hint="@string/correo_electr_nico"
         android:textColorHint="@color/black"
-        android:layout_marginTop="50dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="32dp">
@@ -53,7 +66,7 @@
         app:startIconTint="@color/black"
         android:hint="@string/contrase_a"
         android:textColorHint="@color/black"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@+id/tilEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,24 +83,27 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/iniciar_sesi_n"
-        android:id="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/tilPassword"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvRegistrar"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="32dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/tvRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tvRegistrar"
         android:text="@string/no_estas_registrado_reg_strate"
         android:textColor="#000000"
-        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        android:layout_marginBottom="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

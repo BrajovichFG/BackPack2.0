@@ -13,7 +13,7 @@
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Crear producto"
+        android:text="Ingresar un GPS"
         android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
-        android:hint="Nombre producto"
+        android:hint="@string/ingrese_un_apodo_para_su_gps"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo">
@@ -48,7 +49,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="30dp"
-        android:hint="Descripción producto"
+        android:hint="@string/ingresar_identificador_del_dispositivo"
+        android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tilNombreProducto">
@@ -62,7 +64,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guardar producto"
+        android:text="@string/guardar_dispositivo"
         android:id="@+id/btnGuardar"
         app:layout_constraintTop_toBottomOf="@id/tilDescripcionProducto"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +74,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ver producto"
+        android:text="@string/ver_dispositivos_registrados"
         android:id="@+id/btnVer"
         app:layout_constraintTop_toBottomOf="@id/btnGuardar"
         app:layout_constraintStart_toStartOf="parent"

@@ -6,6 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.backpack20.Vistas.AvanzadoFragment
+import com.example.backpack20.Vistas.PerfilFragment
+import com.example.backpack20.Vistas.SalirFragment
 
 import com.example.backpack20.databinding.ActivityPostLoginBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -56,13 +59,14 @@ class PostLogin : AppCompatActivity() {
 
         }
 
-        binding.btnDispositivosGuardados.setOnClickListener{
+        binding.btnDispositivosGuardados.setOnClickListener {
             //variable para llamar otra pantalla
-            val intent = Intent(this,MainActivity2::class.java)
+            val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
 
     }
+
 
     private fun signOut() {
         Firebase.auth.signOut()

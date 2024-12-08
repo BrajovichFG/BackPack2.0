@@ -14,4 +14,15 @@
     <string name="salir">Salir</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imggps">imgGps</string>
+    <string name="registrar_usuario">Registrar Usuario</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="confirmar_contrase_a">Confirmar Contraseña</string>
+    <string name="listado_de_dispositivos">Listado de dispositivos</string>
+    <string name="ingrese_un_apodo_para_su_gps">Ingrese un apodo para su GPS</string>
+    <string name="ingresar_identificador_del_dispositivo">Ingresar Identificador del Dispositivo</string>
+    <string name="guardar_dispositivo">Guardar Dispositivo</string>
+    <string name="ver_dispositivos_registrados">Ver Dispositivos Registrados</string>
+    <string name="dispositivos_guardados">Dispositivos Guardados</string>
+    <string name="dispositivos">Dispositivos</string>
 </resources>
