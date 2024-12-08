@@ -6,7 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.example.backpack20.Vistas.AvanzadoFragment
+import com.example.backpack20.Vistas.DispositivosFragment
 import com.example.backpack20.Vistas.PerfilFragment
 import com.example.backpack20.Vistas.SalirFragment
 
@@ -65,40 +67,40 @@ class PostLogin : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Configuración de navegación con el BottomNavigationView
-        binding.bootomNavigation.setOnItemSelectedListener {
-            when (it.itemId){
+        // Configurar el menú de navegación inferior
+        binding.bootomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
                 R.id.item_1 -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, PerfilFragment()).commit()
+                    loadFragment(PerfilFragment())
                     true
                 }
                 R.id.item_2 -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, SalirFragment()).commit()
+                    loadFragment(SalirFragment())
                     true
                 }
                 R.id.item_3 -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, AvanzadoFragment()).commit()
+                    loadFragment(AvanzadoFragment())
+                    true
+                }
+                R.id.item_4 -> {
+                    loadFragment(DispositivosFragment())
                     true
                 }
                 else -> false
             }
         }
 
-        // Evitar recargar los fragmentos cuando se re-selecciona un ítem
-        binding.bootomNavigation.setOnItemReselectedListener {
-            when (it.itemId){
-                R.id.item_1 -> {
-                    true
-                }
-                R.id.item_2 -> {
-                    true
-                }
-                R.id.item_3 -> {
-                    true
-                }
-                else -> false
-            }
+        // Botón para cerrar sesión
+        binding.btnLogout.setOnClickListener {
+            signOut()
         }
+    }
+
+    // Función para cargar fragmentos
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
     }
 
 
