@@ -34,4 +34,10 @@
     <string name="busca_tu_dispositivo">Busca tu Dispositivo</string>
     <string name="cerrar_sesion">Cerrar sesion</string>
     <string name="buscar">Buscar</string>
+    <string name="ingresar_un_gps">Ingresar un GPS</string>
+    <string name="bpgps">BPGPS</string>
+    <string name="nombre">nombre</string>
+    <string name="descripcion">descripcion</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
 </resources>

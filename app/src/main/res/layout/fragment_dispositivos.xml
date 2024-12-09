@@ -9,11 +9,12 @@
     android:id="@+id/main"
     tools:context=".Vistas.DispositivosFragment">
 
+
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingresar un GPS"
+        android:text="@string/ingresar_un_gps"
         android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="50dp" />
 
+    <!-- imput para registrar un dispositivo -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNombreProducto"
         android:layout_width="0dp"
@@ -41,6 +43,7 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- imput para registrar dispositivo -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilDescripcionProducto"
         android:layout_width="0dp"
@@ -61,6 +64,7 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- boton para guardar  -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,6 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="50dp" />
 
+    <!-- boton para ver ir a otro layout -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

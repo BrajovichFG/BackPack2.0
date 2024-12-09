@@ -18,6 +18,7 @@
         android:layout_gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"/>
 
+    <!-- Recycler View para mostrar lista de Dispositivos -->
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

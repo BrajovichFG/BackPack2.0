@@ -32,6 +32,7 @@ class VerProductosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        //iniciando binding
         binding = ActivityVerProductosBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -53,6 +54,7 @@ class VerProductosActivity : AppCompatActivity() {
 
     }
 
+    //funcion para obtener productos en una lista
     private fun getProductos() {
         database = FirebaseDatabase.getInstance().getReference("Productos")
         database.addValueEventListener(object: ValueEventListener{

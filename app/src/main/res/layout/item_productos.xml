@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BPGPS"
+                android:text="@string/bpgps"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 />
             <TextView
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="nombre"
+                android:text="@string/nombre"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorSecondary"
                 />
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="descripcion"
+                android:text="@string/descripcion"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorSecondary"
                 />
@@ -59,14 +59,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="Editar"
+                android:text="@string/editar"
                 style="@style/Widget.Material3.Button.TonalButton"
                 />
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEliminaritem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eliminar"
+                android:text="@string/eliminar"
                 style="@style/Widget.Material3.Button.TonalButton"
                 />
         </LinearLayout>

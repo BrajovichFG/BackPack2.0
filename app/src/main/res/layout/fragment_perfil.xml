@@ -36,7 +36,7 @@
         app:layout_constraintBottom_toTopOf="@id/tvBio"
         app:layout_constraintVertical_chainStyle="packed"/>
 
-
+    <!-- descripcion perfil -->
     <TextView
         android:id="@+id/tvBio"
         android:layout_width="0dp"
@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-
+    <!-- boton para editar -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnEditProfile"
         android:layout_width="0dp"

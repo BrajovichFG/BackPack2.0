@@ -9,6 +9,7 @@
     android:id="@+id/main"
     tools:context=".PostLogin">
 
+    <!-- texto de bienvenida  -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -20,19 +21,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Textview para mostrar usuario -->
     <TextView
         android:id="@+id/tvUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="40sp"
+        android:textSize="30sp"
+        android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
         app:layout_constraintTop_toBottomOf="@id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />
 
-
+    <!-- boton para cerrar sesion -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSalir"
         android:layout_width="match_parent"
@@ -42,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-
+    <!-- inicializacion menu de navegacion -->
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
