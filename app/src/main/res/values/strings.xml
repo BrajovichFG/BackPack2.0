@@ -30,4 +30,8 @@
     <string name="bienvenido_usuario_en_esta_pagina_tendras_toda_la_informacion_de_tu_perfil_tambien_podras_editar_tus_datos_tener_datos_de_interes_y_mucho_mas_que_estara_disponible_en_una_nueva_version_de_backpackgps">Bienvenido usuario en esta pagina tendras toda la informacion de tu perfil, tambien podras editar tus datos, tener datos de interes y mucho mas que estara disponible en una nueva version de backpackGPS</string>
     <string name="usuario">USUARIO</string>
     <string name="imagen_de_perfil">Imagen de perfil</string>
+    <string name="mapa">mapa</string>
+    <string name="busca_tu_dispositivo">Busca tu Dispositivo</string>
+    <string name="cerrar_sesion">Cerrar sesion</string>
+    <string name="buscar">Buscar</string>
 </resources>

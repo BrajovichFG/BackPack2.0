@@ -13,18 +13,11 @@ import com.example.backpack20.databinding.FragmentDispositivosBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [DispositivosFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DispositivosFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -55,14 +48,17 @@ class DispositivosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Inicialización de base de datos
-        database = FirebaseDatabase.getInstance().getReference("Dispositivos")
+        database = FirebaseDatabase.getInstance().getReference("Productos")
 
         binding.btnGuardar.setOnClickListener {
+            // Código para guardar el producto
             val nombre = binding.etNombreProducto.text.toString()
             val descripcion = binding.etDescripcionProducto.text.toString()
 
-            val id = database.child("Dispositivos").push().key
+            // Generar el id random
+            val id = database.child("Productos").push().key
 
+            // Condicionales para no tener campos vacíos
             if (nombre.isEmpty()) {
                 binding.etNombreProducto.error = "Por favor ingrese nombre"
                 return@setOnClickListener
@@ -72,14 +68,16 @@ class DispositivosFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            val dispositivo = Producto(id, nombre, descripcion)
+            // Definir constructor
+            val producto = Producto(id, nombre, descripcion)
 
-            database.child(id!!).setValue(dispositivo)
+            // Función para la inserción
+            database.child(id!!).setValue(producto)
                 .addOnCompleteListener {
+                    // Reinicia los campos para seguir ingresando
                     binding.etNombreProducto.setText("")
                     binding.etDescripcionProducto.setText("")
-                    Snackbar.make(binding.root, "Dispositivo agregado", Snackbar.LENGTH_SHORT)
-                        .show()
+                    Snackbar.make(binding.root, "Producto agregado", Snackbar.LENGTH_SHORT).show()
                 }
         }
 
@@ -90,18 +88,9 @@ class DispositivosFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AvanzadoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            AvanzadoFragment().apply {
+            DispositivosFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -8,17 +8,17 @@
 
     <item
         android:id="@+id/item_3"
-        android:title="@string/avanzado"
+        android:title="@string/buscar"
         android:enabled="true"
         android:icon="@drawable/ic_map"/>
     <item
         android:id="@+id/item_2"
-        android:title="@string/salir"
+        android:title="@string/inicio"
         android:enabled="true"
         android:icon="@drawable/ic_exit"/>
     <item
         android:id="@+id/item_4"
-        android:title="Dispositivos"
+        android:title="@string/dispositivos"
         android:enabled="true"
         android:icon="@drawable/ic_disp"/>
 

@@ -33,10 +33,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-       //cargar fragmementos (arreglar menu)
-
-
-
+        //inicializacion de firebase
         auth = Firebase.auth
 
         //configuracion para boton login
@@ -67,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //se crea funcion para registrar que toma como parametros correo y contraseña
     private fun singUp(email: String, password: String) {
         auth.signInWithEmailAndPassword(email,password)
             .addOnCompleteListener{

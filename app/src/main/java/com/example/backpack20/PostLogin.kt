@@ -1,17 +1,15 @@
 package com.example.backpack20
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import com.example.backpack20.Vistas.AvanzadoFragment
 import com.example.backpack20.Vistas.DispositivosFragment
+import com.example.backpack20.Vistas.InicioFragment
+import com.example.backpack20.Vistas.MapaFragment
 import com.example.backpack20.Vistas.PerfilFragment
-import com.example.backpack20.Vistas.SalirFragment
-
 import com.example.backpack20.databinding.ActivityPostLoginBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
@@ -37,7 +35,7 @@ class PostLogin : AppCompatActivity() {
             insets
         }
 
-        // Inicializar firebase
+        // Inicializar Firebase
         auth = Firebase.auth
 
         // Mostrar el correo del usuario
@@ -45,9 +43,7 @@ class PostLogin : AppCompatActivity() {
         user?.let {
             binding.tvUserEmail.text = "Ingresaste como ${it.email}"
         }
-
-        // Programar el botón de logout
-        binding.btnLogout.setOnClickListener {
+        binding.btnSalir.setOnClickListener {
             MaterialAlertDialogBuilder(this)
                 .setTitle("Cerrar sesión")
                 .setMessage("¿Estás seguro de que deseas cerrar sesión?")
@@ -58,13 +54,6 @@ class PostLogin : AppCompatActivity() {
                     signOut()
                 }
                 .show()
-
-        }
-
-        binding.btnDispositivosGuardados.setOnClickListener {
-            //variable para llamar otra pantalla
-            val intent = Intent(this, MainActivity2::class.java)
-            startActivity(intent)
         }
 
         // Configurar el menú de navegación inferior
@@ -75,11 +64,11 @@ class PostLogin : AppCompatActivity() {
                     true
                 }
                 R.id.item_2 -> {
-                    loadFragment(SalirFragment())
+                    loadFragment(InicioFragment())
                     true
                 }
                 R.id.item_3 -> {
-                    loadFragment(AvanzadoFragment())
+                    loadFragment(MapaFragment())
                     true
                 }
                 R.id.item_4 -> {
@@ -89,11 +78,11 @@ class PostLogin : AppCompatActivity() {
                 else -> false
             }
         }
+    }
 
-        // Botón para cerrar sesión
-        binding.btnLogout.setOnClickListener {
-            signOut()
-        }
+    private fun signOut() {
+        Firebase.auth.signOut()
+        finish()
     }
 
     // Función para cargar fragmentos
@@ -101,13 +90,5 @@ class PostLogin : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
             .commit()
-    }
-
-
-
-
-    private fun signOut() {
-        Firebase.auth.signOut()
-        finish()
     }
 }
